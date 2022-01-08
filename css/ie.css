@@ -1,0 +1,8 @@
+#content {
+	box-shadow: 0 0 10px #ddd;
+	behavior: url('js/PIE.htc');
+	position:relative;
+}
+#confirm input  {
+	line-height:34px;
+}

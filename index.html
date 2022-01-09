@@ -178,7 +178,7 @@
       <div class="container">
         <div class="as-header-bar">
           <div class="row">
-            <div class="col-md-2"><a href="index.html" class="logo"><img class="lazy" data-src="images/logo.png" alt=""></a></div>
+            <div class="col-md-2"><a href="index.html" class="logo"><img class="imageWithBundle" data-src="images/logo.png" alt=""></a></div>
             <div class="col-md-10">
 
               <div class="as-section-right">
@@ -296,7 +296,7 @@
       <div class="flexslider">
         <ul class="slides">
           <li>
-            <img src="extra-images/bannerA.webp" alt="" />
+            <img class="imageWithBundle" data-src="extra-images/bannerA.webp" alt="" />
             <div class="as-caption">
               <div class="container">
                 <h1><span>We Believe Every Child Matters</span></h1>
@@ -309,7 +309,7 @@
             </div>
           </li>
           <li>
-            <img src="extra-images/bannerB.webp" alt="" />
+            <img class="imageWithBundle" data-src="extra-images/bannerB.webp" alt="" />
             <div class="as-caption">
               <div class="container">
                 <h1><span>A Teacher can change a Child's Life</span></h1>
@@ -954,7 +954,7 @@
       <div class="row">
 
         <aside class="widget widget_info col-md-3">
-          <a href="index.html" class="footer-logo"><img class="lazy" data-src="images/footer-logo.png" alt=""></a>
+          <a href="index.html" class="footer-logo"><img class="imageWithBundle" data-src="images/footer-logo.png" alt=""></a>
           <ul>
             <li><i class="fa fa-home"></i> New York Location<br>2772 Nostrand Avenue<br>Brooklyn, NY 11210</li>
             <li><i class="fa fa-envelope-o"></i> <a href="mailto:info@magenu.org" target="_top">info@magenu.org</a></li>
@@ -1032,7 +1032,8 @@
   </div>
   <!-- Search Modal -->
 
-  <script src="bundles/bundle.js"></script>
+  <script src="bundles/popup.js"></script>
+  <!-- <script src="bundles/bundle.js"></script> -->
   <!-- jQuery (necessary for JavaScript plugins) -->
   <!-- <script src="script/jquery.min.js"></script>
   <script src="script/modernizr.js"></script>
@@ -1072,16 +1073,13 @@
   
   
   <script>
+
       const lazy = document.querySelectorAll(".lazy");
-  // const lazy = document.querySelector(".lazy");
-  // console.log('lazyloadImages')
-  // console.log(lazy)
 
 
     const imageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            // console.log(entry)
           const image = entry.target;
           image.src = image.dataset.src;
           image.classList.remove("lazy");
@@ -1089,8 +1087,6 @@
           }
       });
       });
-      
-      // imageObserver.observe(lazy);
       
       lazy.forEach(function(image) {
           imageObserver.observe(image);
@@ -1116,6 +1112,8 @@
               BGImagesObserver.observe(bgImges);
       });
   </script>
+
+
 </body>
 
 </html>
